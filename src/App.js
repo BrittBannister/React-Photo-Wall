@@ -21,15 +21,15 @@ class App extends Component {
 
   componentDidMount(){
     fetch(PHOTO_LIST_URL)
-      .then((info) => {return info.json()})
-      .then((data) => {
-        this.setState({photosArray: data})
+      .then((response) => {return response.json()})
+      .then((photoInfo) => {
+        this.setState({photosArray: photoInfo})
         console.log(this.state.photosArray)
       })
   }
 
   render() {
-    const  photos =  this.state.photosArray
+    const photos = this.state.photosArray
 
     console.log(photos);
 
@@ -47,7 +47,7 @@ class App extends Component {
             {photos.map( (photo) => (  
                 <img alt={photo.filename}
                      key={photo.id}
-                     src={PHOTO_URL+photo.post_url}
+                     src={PHOTO_URL(photo.id)}
                 />
             ))}
         </div>

@@ -1,11 +1,25 @@
 /* 6. Write CSS rules that cause the header and .collage div to be centered on the page */
 
+:root {
+    background-color: lightskyblue;
+}
+
 header {
     margin: 0 auto;
     width: 800px;
-    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+    /* text-align: center; */
     color: black;
+    position: fixed;
 }
 
 
 /* 7. Write CSS rules that ensure that no more than 4 photos appear on a row */
+
+.collage {
+    margin: 0 auto;
+    width: 800px;
+}
